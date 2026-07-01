@@ -16,6 +16,7 @@ public abstract class Persona {
     //CONSTRUCTORES
     public Persona(){
         
+        
     }
     public Persona(String nombres, String apellidos){
         this.nombres = nombres;
