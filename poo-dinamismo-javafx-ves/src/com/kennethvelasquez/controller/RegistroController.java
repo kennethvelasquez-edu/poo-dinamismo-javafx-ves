@@ -14,6 +14,7 @@ import javafx.collections.FXCollections;
 public class RegistroController {
     private final RegistroView registroView;
     private ArrayList <Persona> listaPersonas;
+    private static ArrayList <Persona> listaRegistroPersonas;
     
     public RegistroController ( RegistroView registroView ){
         this.registroView = registroView;
@@ -30,6 +31,11 @@ public class RegistroController {
         listaPersonas.add(objetoEstudiante);
         listaPersonas.add(objetoMaestro);
         
+        listaRegistroPersonas = new ArrayList<>();
+        
+        listaRegistroPersonas.add(
+                new Estudiante("4to", 123, true, "Juanito", "Panchito")
+        );
     }
     public void construirComboBox(){
         this.registroView.getCmbTipoPersona().setItems(
@@ -38,6 +44,10 @@ public class RegistroController {
     }
     public void construirAcciones(){
         
+    }
+
+    public static ArrayList<Persona> getListaRegistroPersonas() {
+        return listaRegistroPersonas;
     }
     
 }

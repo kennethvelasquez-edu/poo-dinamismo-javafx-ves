@@ -2,6 +2,7 @@
 package com.kennethvelasquez.controller;
 
 import com.kennethvelasquez.view.RegistroView;
+import com.kennethvelasquez.view.ResumenView;
 import com.kennethvelasquez.view.VistaPrincipalView;
 
 public class VistaPrincipalController {
@@ -15,12 +16,18 @@ public class VistaPrincipalController {
     
     public void construirControladores(){
         new RegistroController( RegistroView.getInstanciaRegistroView() );
+        new ResumenController( ResumenView.getInstanciaResumenView() );
     }
     
     public void construirAcciones(){
         this.vistaPrincipalView.getTabRegistro().setContent(
             RegistroView.getInstanciaRegistroView().getInstanciaPanel()
         );
+        
+        this.vistaPrincipalView.getTabResumen().setContent(
+            ResumenView.getInstanciaResumenView().getInstanciaPanel()
+        );
+        
     }
     
 }

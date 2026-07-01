@@ -60,13 +60,13 @@ public class RegistroView {
 
         formulario = new GridPane(15, 10);
 
-// Inicialización de atributos Persona
+        // Inicialización de atributos Persona
         lblNombres = new Label("Nombres:");
         lblApellidos = new Label("Apellidos:");
         txtNombres = new TextField();
         txtApellidos = new TextField();
 
-// Inicialización de atributos Estudiante
+        // Inicialización de atributos Estudiante
         lblGradoEstudiante = new Label("Grado Estudiante:");
         lblNumeroCarne = new Label("Número de Carné:");
         lblAprobado = new Label("Aprobado:");
@@ -74,7 +74,7 @@ public class RegistroView {
         txtNumeroCarne = new TextField();
         rbAprabado = new RadioButton();
 
-// Inicialización de atributos Maestro
+        // Inicialización de atributos Maestro
         lblActivo = new Label("Activo:");
         lblCurso = new Label("Curso:");
         lblGradoMaestro = new Label("Grado Maestro:");
@@ -82,11 +82,11 @@ public class RegistroView {
         txtCurso = new TextField();
         cbActivo = new CheckBox();
 
-// Inicialización de botones
+        // Inicialización de botones
         btnGuardar = new Button("Guardar");
         btnLimpiar = new Button("Limpiar");
 
-// Agregar componentes al GridPane (2 columnas)
+        // Agregar componentes al GridPane (2 columnas)
         formulario.add(lblNombres, 0, 0);
         formulario.add(txtNombres, 1, 0);
 
@@ -118,6 +118,7 @@ public class RegistroView {
 
         instanciaPanel.getChildren().add(cajaVertical);
     }
+
 
     public Label getLblTipoPersona() {
         return lblTipoPersona;
