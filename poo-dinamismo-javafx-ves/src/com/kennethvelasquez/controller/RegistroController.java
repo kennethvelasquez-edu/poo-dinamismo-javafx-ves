@@ -6,9 +6,9 @@ package com.kennethvelasquez.controller;
 
 import com.kennethvelasquez.view.RegistroView;
 import java.util.ArrayList;
-import com.kennethvelasquez.model.Persona;
-import com.kennethvelasquez.model.Estudiante;
-import com.kennethvelasquez.model.Maestro;
+import com.kennethv.model.Persona;
+import com.kennethv.model.Estudiante;
+import com.kennethv.model.Maestro;
 import javafx.collections.FXCollections;
 
 public class RegistroController {
