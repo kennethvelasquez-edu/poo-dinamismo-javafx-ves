@@ -93,6 +93,7 @@ public class RegistroView {
         formulario.add(lblApellidos, 0, 1);
         formulario.add(txtApellidos, 1, 1);
 
+        // Estudiante
         formulario.add(lblGradoEstudiante, 0, 2);
         formulario.add(txtGradoEstudiante, 1, 2);
 
@@ -102,15 +103,16 @@ public class RegistroView {
         formulario.add(lblAprobado, 0, 4);
         formulario.add(rbAprabado, 1, 4);
 
+        // Estudiante
         formulario.add(lblGradoMaestro, 0, 5);
         formulario.add(txtGradoMaestro, 1, 5);
 
         formulario.add(lblCurso, 0, 6);
         formulario.add(txtCurso, 1, 6);
-
+        
         formulario.add(lblActivo, 0, 7);
         formulario.add(cbActivo, 1, 7);
-
+        
         formulario.add(btnGuardar, 0, 8);
         formulario.add(btnLimpiar, 1, 8);
 
@@ -162,4 +164,149 @@ public class RegistroView {
     public Pane getInstanciaPanel() {
         return instanciaPanel;
     }
+
+    public Label getLblNombres() {
+        return lblNombres;
+    }
+
+    public void setLblNombres(Label lblNombres) {
+        this.lblNombres = lblNombres;
+    }
+
+    public Label getLblApellidos() {
+        return lblApellidos;
+    }
+
+    public void setLblApellidos(Label lblApellidos) {
+        this.lblApellidos = lblApellidos;
+    }
+
+    public TextField getTxtNombres() {
+        return txtNombres;
+    }
+
+    public void setTxtNombres(TextField txtNombres) {
+        this.txtNombres = txtNombres;
+    }
+
+    public TextField getTxtApellidos() {
+        return txtApellidos;
+    }
+
+    public void setTxtApellidos(TextField txtApellidos) {
+        this.txtApellidos = txtApellidos;
+    }
+
+    public Label getLblGradoEstudiante() {
+        return lblGradoEstudiante;
+    }
+
+    public void setLblGradoEstudiante(Label lblGradoEstudiante) {
+        this.lblGradoEstudiante = lblGradoEstudiante;
+    }
+
+    public Label getLblNumeroCarne() {
+        return lblNumeroCarne;
+    }
+
+    public void setLblNumeroCarne(Label lblNumeroCarne) {
+        this.lblNumeroCarne = lblNumeroCarne;
+    }
+
+    public Label getLblAprobado() {
+        return lblAprobado;
+    }
+
+    public void setLblAprobado(Label lblAprobado) {
+        this.lblAprobado = lblAprobado;
+    }
+
+    public TextField getTxtGradoEstudiante() {
+        return txtGradoEstudiante;
+    }
+
+    public void setTxtGradoEstudiante(TextField txtGradoEstudiante) {
+        this.txtGradoEstudiante = txtGradoEstudiante;
+    }
+
+    public TextField getTxtNumeroCarne() {
+        return txtNumeroCarne;
+    }
+
+    public void setTxtNumeroCarne(TextField txtNumeroCarne) {
+        this.txtNumeroCarne = txtNumeroCarne;
+    }
+
+    public RadioButton getRbAprabado() {
+        return rbAprabado;
+    }
+
+    public void setRbAprabado(RadioButton rbAprabado) {
+        this.rbAprabado = rbAprabado;
+    }
+
+    public Label getLblActivo() {
+        return lblActivo;
+    }
+
+    public void setLblActivo(Label lblActivo) {
+        this.lblActivo = lblActivo;
+    }
+
+    public Label getLblCurso() {
+        return lblCurso;
+    }
+
+    public void setLblCurso(Label lblCurso) {
+        this.lblCurso = lblCurso;
+    }
+
+    public Label getLblGradoMaestro() {
+        return lblGradoMaestro;
+    }
+
+    public void setLblGradoMaestro(Label lblGradoMaestro) {
+        this.lblGradoMaestro = lblGradoMaestro;
+    }
+
+    public TextField getTxtGradoMaestro() {
+        return txtGradoMaestro;
+    }
+
+    public void setTxtGradoMaestro(TextField txtGradoMaestro) {
+        this.txtGradoMaestro = txtGradoMaestro;
+    }
+
+    public TextField getTxtCurso() {
+        return txtCurso;
+    }
+
+    public void setTxtCurso(TextField txtCurso) {
+        this.txtCurso = txtCurso;
+    }
+
+    public CheckBox getCbActivo() {
+        return cbActivo;
+    }
+
+    public void setCbActivo(CheckBox cbActivo) {
+        this.cbActivo = cbActivo;
+    }
+
+    public Button getBtnGuardar() {
+        return btnGuardar;
+    }
+
+    public void setBtnGuardar(Button btnGuardar) {
+        this.btnGuardar = btnGuardar;
+    }
+
+    public Button getBtnLimpiar() {
+        return btnLimpiar;
+    }
+
+    public void setBtnLimpiar(Button btnLimpiar) {
+        this.btnLimpiar = btnLimpiar;
+    }
+    
 }
