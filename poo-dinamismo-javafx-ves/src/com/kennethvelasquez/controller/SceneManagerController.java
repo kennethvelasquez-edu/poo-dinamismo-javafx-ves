@@ -34,6 +34,9 @@ public class SceneManagerController {
     
     public void vistaPrincipal(){
         try {
+            //Le doy nombre a la ventana
+            this.escenarioPrincipal.setTitle("JAVAFX-POO | REGISTRO Y LISTA");
+            this.escenarioPrincipal.setResizable(false);
             VistaPrincipalView vistaPrincipal = VistaPrincipalView.getInstanciaVistaPrincipalView();
             cambiarEscenaPrincipal(vistaPrincipal.getInstanciaPanel(), 680, 580 );
             new VistaPrincipalController( vistaPrincipal );

@@ -17,6 +17,7 @@ public class VistaPrincipalView {
     private TabPane seccionTabs;
     private Tab tabRegistro;
     private Tab tabResumen;
+    private final String RUTA_ESTILOS = "/com/kennethvelasquez/styles/";
     
     //CONSTRUCTORES
     private VistaPrincipalView (){
@@ -24,11 +25,20 @@ public class VistaPrincipalView {
     }
     
     public void construirVista(){
+         /*El problema con que no se ve el formulario es por el tamaño, con css voy arreglar lo visual
+            usare un archivo css para todo el contenido del panel
+        */
         instanciaPanel = new Pane();
+        //Como ya cree el objeto puedo agregar el css global del panel
+        instanciaPanel.getStylesheets().add(RUTA_ESTILOS + "VistaPrincipalStyle.css");
+        instanciaPanel.getStyleClass().add("panel-principal"); //agrego el nombre panel-principal al contenedor panel
         
         cajaVertical = new VBox(15);
+        cajaVertical.getStyleClass().add("caja-vertical");
         // CONTENEDOR DE PESTAÑAS
         seccionTabs = new TabPane();
+        seccionTabs.getStyleClass().add("seccion-tabs");
+        seccionTabs.setPrefWidth(680);
         //PESTAÑAS
         tabRegistro = new Tab("Registro");
         tabRegistro.setClosable(false);
