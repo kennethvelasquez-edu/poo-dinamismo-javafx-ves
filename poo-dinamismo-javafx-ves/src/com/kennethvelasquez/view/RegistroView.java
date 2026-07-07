@@ -22,6 +22,7 @@ public class RegistroView {
     private ComboBox<Persona> cmbTipoPersona;
     private VBox cajaVertical;
     private Label lblTipoPersona;
+    private final String RUTA_ESTILOS = "/com/kennethvelasquez/styles/";
 
     private GridPane formulario;
     //ATRIBUTOS PERSONA
@@ -53,6 +54,9 @@ public class RegistroView {
 
     public void construirVista() {
         instanciaPanel = new Pane();
+        instanciaPanel.getStylesheets().add(RUTA_ESTILOS + "RegistroStyles.css");
+        instanciaPanel.getStyleClass().add("panel-registro"); //agrego el nombre panel-principal al contenedor panel
+        
 
         cajaVertical = new VBox(10);
         cmbTipoPersona = new ComboBox<>();
@@ -84,7 +88,9 @@ public class RegistroView {
 
         // Inicialización de botones
         btnGuardar = new Button("Guardar");
+        btnGuardar.getStyleClass().add("btn-guardar");
         btnLimpiar = new Button("Limpiar");
+        btnLimpiar.getStyleClass().add("btn-limpiar");
 
         // Agregar componentes al GridPane (2 columnas)
         formulario.add(lblNombres, 0, 0);
