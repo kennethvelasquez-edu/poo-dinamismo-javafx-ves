@@ -17,6 +17,7 @@ public class ResumenView {
     private TableColumn <Persona , String> colNombres;
     private TableColumn <Persona, String> colApellidos;
     private VBox cajaVertical;
+    private final String RUTA_ESTILOS = "/com/kennethvelasquez/styles/";
     
     private ResumenView(){
         construirVista();
@@ -24,12 +25,19 @@ public class ResumenView {
     
     public void construirVista(){
         instanciaPanel = new Pane();
+        instanciaPanel.setPrefWidth(680);
+        instanciaPanel.getStylesheets().add(RUTA_ESTILOS + "ResumenStyle.css");
+        instanciaPanel.getStyleClass().add("panel-resumen");
+        
         cajaVertical = new VBox(10);
+        cajaVertical.setPrefWidth(680);
         
         tblPersonas = new TableView<>();
         
         colNombres = new TableColumn<>("Nombres");
+        colNombres.setMinWidth(328);
         colApellidos = new TableColumn<>("Apellidos");
+        colApellidos.setMinWidth(328);
         
         tblPersonas.getColumns().add(colNombres);
         tblPersonas.getColumns().add(colApellidos);
