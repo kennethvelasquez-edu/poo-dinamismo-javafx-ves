@@ -21,6 +21,7 @@
 
 .panel-registro{
       -fx-min-width: 680px;
+    -fx-background-color:#10192a;
 }
 
 .panel-registro VBox{

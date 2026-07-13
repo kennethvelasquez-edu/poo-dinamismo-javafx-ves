@@ -15,7 +15,7 @@ public class VistaPrincipalController {
     }
     
     public void construirControladores(){
-        new RegistroController( RegistroView.getInstanciaRegistroView() );
+        new RegistroController(  RegistroView.getInstanciaRegistroView()  );
         new ResumenController( ResumenView.getInstanciaResumenView() );
     }
     

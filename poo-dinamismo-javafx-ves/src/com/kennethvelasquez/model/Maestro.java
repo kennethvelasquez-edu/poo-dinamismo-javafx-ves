@@ -18,10 +18,11 @@ public class Maestro extends Persona{
         super();
     }
 
-    public Maestro(boolean activo, String curso, String nombres, String apellidos) {
+    public Maestro(boolean activo, String curso, String nombres, String apellidos, String grado) {
         super(nombres, apellidos);
         this.activo = activo;
         this.curso = curso;
+        this.grado = grado;
     }
 
     public boolean isActivo() {

@@ -36,7 +36,7 @@ public class RegistroView {
     private Label lblAprobado;
     private TextField txtGradoEstudiante;
     private TextField txtNumeroCarne;
-    private RadioButton rbAprabado;
+    private RadioButton rbAprobado;
     //ATRIBUTOS MAESTRO
     private Label lblActivo;
     private Label lblCurso;
@@ -76,7 +76,7 @@ public class RegistroView {
         lblAprobado = new Label("Aprobado:");
         txtGradoEstudiante = new TextField();
         txtNumeroCarne = new TextField();
-        rbAprabado = new RadioButton();
+        rbAprobado = new RadioButton();
 
         // Inicialización de atributos Maestro
         lblActivo = new Label("Activo:");
@@ -107,7 +107,7 @@ public class RegistroView {
         formulario.add(txtNumeroCarne, 1, 3);
 
         formulario.add(lblAprobado, 0, 4);
-        formulario.add(rbAprabado, 1, 4);
+        formulario.add(rbAprobado, 1, 4);
 
         // Estudiante
         formulario.add(lblGradoMaestro, 0, 5);
@@ -243,12 +243,12 @@ public class RegistroView {
         this.txtNumeroCarne = txtNumeroCarne;
     }
 
-    public RadioButton getRbAprabado() {
-        return rbAprabado;
+    public RadioButton getRbAprobado() {
+        return rbAprobado;
     }
 
-    public void setRbAprabado(RadioButton rbAprabado) {
-        this.rbAprabado = rbAprabado;
+    public void setRbAprobado(RadioButton rbAprobado) {
+        this.rbAprobado = rbAprobado;
     }
 
     public Label getLblActivo() {

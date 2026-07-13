@@ -9,7 +9,9 @@ import com.kennethvelasquez.view.ResumenView;
 import java.util.ArrayList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.SelectionModel;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javax.swing.JOptionPane;
 
 public class ResumenController {
     private final ResumenView resumenView;
@@ -40,6 +42,26 @@ public class ResumenController {
     }
     
     public void construirAcciones(){
+        this.resumenView.getBtnVerInformacion().setOnAction(
+            (evento)->{
+                verInformacion();
+            }
+        );
+    }
+    public void verInformacion(){
+        Persona objetoSeleccionado = this.resumenView.getTblPersonas()
+                                         .getSelectionModel().getSelectedItem();
+        
+        SelectionModel modeloSeleccionado = this.resumenView.getTblPersonas().getSelectionModel();
+        Persona personaSeleccionado = (Persona) modeloSeleccionado.getSelectedItem();
+        
+        if( objetoSeleccionado == null ){
+            JOptionPane.showMessageDialog(null, "SELECCIONE UN REGISTRO");
+        }else{
+            JOptionPane.showMessageDialog(null, objetoSeleccionado.presentacionPersona()  );
+            JOptionPane.showMessageDialog(null, personaSeleccionado.presentacionPersona() );
+        }
         
     }
+    
 }

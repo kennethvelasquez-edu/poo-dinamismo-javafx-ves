@@ -9,6 +9,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TableColumn;
 import com.kennethvelasquez.model.Persona;
+import javafx.scene.control.Button;
 
 public class ResumenView {
     private static ResumenView instanciaResumenView;
@@ -18,6 +19,7 @@ public class ResumenView {
     private TableColumn <Persona, String> colApellidos;
     private VBox cajaVertical;
     private final String RUTA_ESTILOS = "/com/kennethvelasquez/styles/";
+    private Button btnVerInformacion;
     
     private ResumenView(){
         construirVista();
@@ -32,6 +34,8 @@ public class ResumenView {
         cajaVertical = new VBox(10);
         cajaVertical.setPrefWidth(680);
         
+        btnVerInformacion = new Button("Ver informacion");
+        btnVerInformacion.getStyleClass().add("btn-ver-informacion");
         tblPersonas = new TableView<>();
         
         colNombres = new TableColumn<>("Nombres");
@@ -42,9 +46,16 @@ public class ResumenView {
         tblPersonas.getColumns().add(colNombres);
         tblPersonas.getColumns().add(colApellidos);
         
-        cajaVertical.getChildren().add(tblPersonas);
+        cajaVertical.getChildren().addAll(btnVerInformacion,  tblPersonas);
         instanciaPanel.getChildren().add(cajaVertical);
     }
+    public void setBtnVerInformacion(Button btnVerInformacion){
+        this.btnVerInformacion = btnVerInformacion;
+    }
+    public Button getBtnVerInformacion(){
+        return this.btnVerInformacion;
+    }
+    
 
     public static ResumenView getInstanciaResumenView() {
         if( instanciaResumenView == null  )
